@@ -223,6 +223,7 @@ h1 {
 }
 
 .capabilities,
+.sample-export,
 .test-plan,
 .feedback {
   padding: clamp(56px, 8vw, 92px) 0;
@@ -338,6 +339,45 @@ h2 {
   margin-top: 54px;
 }
 
+.sample-export {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.64fr) minmax(260px, 0.46fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.pdf-preview {
+  margin: 0;
+  padding: clamp(12px, 2vw, 22px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f8fa;
+  box-shadow: 0 24px 60px rgba(31, 38, 54, 0.12);
+}
+
+.pdf-preview img {
+  width: 100%;
+  border: 1px solid rgba(23, 25, 31, 0.12);
+  border-radius: 3px;
+  background: var(--paper);
+}
+
+.sample-export-copy {
+  max-width: 540px;
+}
+
+.sample-export-copy h2 {
+  margin-bottom: 18px;
+}
+
+.sample-export-copy p {
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.58;
+}
+
 .test-plan {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -431,6 +471,7 @@ h2 {
   }
 
   .section-heading,
+  .sample-export,
   .feedback {
     grid-template-columns: 1fr;
     align-items: start;
@@ -497,6 +538,10 @@ h2 {
 
   .phone-pair .offset {
     margin-top: 0;
+  }
+
+  .pdf-preview {
+    padding: 10px;
   }
 
   .button,
