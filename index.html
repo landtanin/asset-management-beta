@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex,nofollow">
-    <meta name="description" content="Private beta page for the AI Inventory iPad app. Try the beta on TestFlight and help test project, floor plan, material, photo, and export workflows.">
+    <meta name="description" content="Private beta page for the AI Inventory app. Try the beta on TestFlight and help test item capture, floor plan marking, and PDF export workflows.">
     <meta property="og:title" content="AI Inventory Private Beta">
-    <meta property="og:description" content="Try the AI Inventory beta on TestFlight and help test project, floor plan, material, photo, and export workflows.">
-    <meta property="og:image" content="assets/ai-inventory-logo.png">
+    <meta property="og:description" content="Try the AI Inventory beta on TestFlight and help test item capture, floor plan marking, and PDF export workflows.">
+    <meta property="og:image" content="assets/screenshots/export-results.png">
     <meta property="og:type" content="website">
     <title>AI Inventory Private Beta</title>
     <link rel="icon" href="assets/ai-inventory-logo.png" type="image/png">
@@ -20,7 +20,7 @@
         <span>AI Inventory Beta</span>
       </a>
       <nav class="site-nav" aria-label="Page navigation">
-        <a href="#screens">Screens</a>
+        <a href="#workflow">Workflow</a>
         <a href="#test">How to test</a>
         <a class="nav-cta" href="https://testflight.apple.com/join/3GUWtppa">Try the beta on TestFlight</a>
       </nav>
@@ -30,9 +30,9 @@
       <section class="hero section-shell">
         <div class="hero-copy">
           <p class="status-line">Private client beta for iPad and iPhone</p>
-          <h1>Capture site assets, floor plan locations, photos, and exports in one field workflow.</h1>
+          <h1>Capture inventory on site, mark floor plans, and generate the PDF.</h1>
           <p class="hero-text">
-            AI Inventory helps teams organise projects, mark materials and assets on plans, attach item photos, and prepare useful exports from site work.
+            AI Inventory helps teams record items with photos, place them on floor plans, and turn the survey into a useful export for review.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="https://testflight.apple.com/join/3GUWtppa">Try the beta on TestFlight</a>
@@ -42,41 +42,61 @@
             This is a beta build. Please expect changes and send feedback on anything confusing, missing, or broken.
           </p>
         </div>
-        <div class="hero-media" aria-label="AI Inventory floor plan screenshot">
-          <img src="assets/screenshots/4MA-Floor-View.png" alt="Floor plan view with asset markers and category legend">
+        <div class="hero-media phone-preview" aria-label="AI Inventory export results screenshot">
+          <img src="assets/screenshots/export-results.png" alt="Project item list with export menu open">
         </div>
       </section>
 
-      <section class="capabilities section-shell" aria-labelledby="capabilities-title">
+      <section id="workflow" class="capabilities section-shell" aria-labelledby="capabilities-title">
         <div class="section-heading">
           <h2 id="capabilities-title">What to try</h2>
-          <p>Focus on the core beta workflow: project setup, floor plans, item capture, photos, and exports.</p>
+          <p>Focus on the end-to-end beta workflow: set up a project, add plans, capture inventory, mark item locations, and export the results.</p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>Manage projects</h3>
-            <p>Create or review project records, status, dates, team details, and project-level organisation.</p>
+        <div class="workflow-list">
+          <article class="workflow-card">
+            <div class="workflow-copy">
+              <span class="feature-number">01</span>
+              <h3>Manage projects</h3>
+              <p>Create or review project records, location, dates, status, and the working project list before starting a survey.</p>
+            </div>
+            <figure class="phone-frame">
+              <img src="assets/screenshots/manage-projects.PNG" alt="AI Inventory projects list showing 221B Baker Street">
+            </figure>
           </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>Add floor plans</h3>
-            <p>Use plan views to organise floors and check whether item markers are clear in a real survey context.</p>
+          <article class="workflow-card reverse">
+            <div class="workflow-copy">
+              <span class="feature-number">02</span>
+              <h3>Add floor plans</h3>
+              <p>Add the plan for each floor so the inventory can be tied back to the exact space being surveyed.</p>
+            </div>
+            <figure class="phone-frame">
+              <img src="assets/screenshots/add-floor-plans.PNG" alt="Floor plans screen with an add floor plan button and plan preview">
+            </figure>
           </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>Capture items</h3>
-            <p>Add materials and assets with references, descriptions, categories, tags, quantities, and notes.</p>
+          <article class="workflow-card capture-card">
+            <div class="workflow-copy">
+              <span class="feature-number">03</span>
+              <h3>Capture and mark items</h3>
+              <p>Add items with photos, quantity, type, and notes. Optionally use AI to draft the item description, then mark the item directly on the floor plan.</p>
+            </div>
+            <div class="phone-pair" aria-label="Capture item and floor plan marker screenshots">
+              <figure class="phone-frame">
+                <img src="assets/screenshots/capture_items.PNG" alt="Add new item form with photo, quantity, and generate with AI option">
+              </figure>
+              <figure class="phone-frame offset">
+                <img src="assets/screenshots/mark_items-on-floorplan.PNG" alt="Floor plan with a marked table item and item category legend">
+              </figure>
+            </div>
           </article>
-          <article class="feature-card">
-            <span class="feature-number">04</span>
-            <h3>Attach photos</h3>
-            <p>Check the photo capture flow, photo ordering, and how clearly images support the item record.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">05</span>
-            <h3>Export results</h3>
-            <p>Try exporting records and floor plan outputs so the reporting workflow can be checked early.</p>
+          <article class="workflow-card reverse">
+            <div class="workflow-copy">
+              <span class="feature-number">04</span>
+              <h3>Export results</h3>
+              <p>Generate the project output and check that the PDF/report is clear enough to share after the site survey.</p>
+            </div>
+            <figure class="phone-frame">
+              <img src="assets/screenshots/export-results.png" alt="Item list with export action available from the project menu">
+            </figure>
           </article>
         </div>
       </section>
@@ -101,69 +121,25 @@
           </li>
           <li>
             <span>4</span>
-            <p>Add a floor plan, then add material or asset items from the plan view.</p>
+            <p>Add a floor plan for the project.</p>
           </li>
           <li>
             <span>5</span>
-            <p>Add item photos and notes, then review the material list and item detail screens.</p>
+            <p>Capture items with photos, notes, and floor plan markers.</p>
           </li>
           <li>
             <span>6</span>
-            <p>Try exporting project information and report anything unclear, incomplete, or unreliable.</p>
+            <p>Export the PDF/results and report anything unclear, incomplete, or unreliable.</p>
           </li>
         </ol>
         <a class="button button-primary wide-cta" href="https://testflight.apple.com/join/3GUWtppa">Try the beta on TestFlight</a>
-      </section>
-
-      <section id="screens" class="screens section-shell" aria-labelledby="screens-title">
-        <div class="section-heading">
-          <h2 id="screens-title">Key screens</h2>
-          <p>These screens show the main workflow areas to test in the beta.</p>
-        </div>
-        <div class="screen-grid">
-          <figure class="screen-card wide">
-            <img src="assets/screenshots/1MA-Projects-Home.png" alt="Projects overview screen with project cards and progress">
-            <figcaption>
-              <strong>Projects</strong>
-              <span>Review project records, status, dates, and high-level progress.</span>
-            </figcaption>
-          </figure>
-          <figure class="screen-card">
-            <img src="assets/screenshots/2MA-Project-Floors.png" alt="Project floor plan list with plan previews">
-            <figcaption>
-              <strong>Floor plans</strong>
-              <span>Add and manage plans for each project.</span>
-            </figcaption>
-          </figure>
-          <figure class="screen-card">
-            <img src="assets/screenshots/3MA-Project-Materials.png" alt="Project materials list with item categories and references">
-            <figcaption>
-              <strong>Materials</strong>
-              <span>Check references, categories, descriptions, and list scanning.</span>
-            </figcaption>
-          </figure>
-          <figure class="screen-card wide">
-            <img src="assets/screenshots/4MA-Floor-View.png" alt="Floor plan with asset markers and legend">
-            <figcaption>
-              <strong>Plan markers</strong>
-              <span>Place and review items directly against the floor plan.</span>
-            </figcaption>
-          </figure>
-          <figure class="screen-card">
-            <img src="assets/screenshots/5MA-Add-Item.png" alt="Add item form with item fields and image area">
-            <figcaption>
-              <strong>Add item</strong>
-              <span>Try the data entry flow for descriptions, quantities, tags, and photos.</span>
-            </figcaption>
-          </figure>
-        </div>
       </section>
 
       <section class="feedback section-shell" aria-labelledby="feedback-title">
         <div>
           <h2 id="feedback-title">What feedback helps most</h2>
           <p>
-            Please report confusing steps, missing fields, photo issues, export problems, floor plan marker problems, crashes, or any workflow that does not match how a real site survey is done.
+            Please report confusing steps, missing fields, capture issues, export problems, floor plan marker problems, crashes, or any workflow that does not match how a real site survey is done.
           </p>
         </div>
         <a class="button button-primary" href="https://testflight.apple.com/join/3GUWtppa">Try the beta on TestFlight</a>

@@ -101,7 +101,7 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
   align-items: center;
   gap: clamp(28px, 4vw, 58px);
   min-height: calc(100vh - 72px);
@@ -199,7 +199,7 @@ h1 {
 
 .hero-media::before {
   position: absolute;
-  inset: auto 8% -20px 8%;
+  inset: auto 14% -20px 14%;
   height: 70px;
   border-radius: 999px;
   background: rgba(23, 25, 31, 0.16);
@@ -211,15 +211,19 @@ h1 {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border: 1px solid rgba(23, 25, 31, 0.1);
-  border-radius: 8px;
+  border: 1px solid rgba(23, 25, 31, 0.08);
+  border-radius: 34px;
   background: var(--paper);
   box-shadow: var(--shadow);
 }
 
+.phone-preview {
+  width: min(430px, 100%);
+  justify-self: center;
+}
+
 .capabilities,
 .test-plan,
-.screens,
 .feedback {
   padding: clamp(56px, 8vw, 92px) 0;
 }
@@ -252,39 +256,86 @@ h2 {
   line-height: 1.58;
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.feature-card {
-  min-height: 230px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.8);
-}
-
 .feature-number {
   display: block;
-  margin-bottom: 34px;
+  margin-bottom: 18px;
   color: var(--primary);
   font-size: 13px;
   font-weight: 800;
 }
 
-.feature-card h3 {
-  margin-bottom: 10px;
-  font-size: 19px;
-  line-height: 1.15;
+.workflow-list {
+  display: grid;
+  gap: 18px;
 }
 
-.feature-card p {
+.workflow-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(220px, 0.42fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 48px rgba(31, 38, 54, 0.07);
+}
+
+.workflow-card.reverse .workflow-copy {
+  order: 2;
+}
+
+.workflow-card.reverse .phone-frame {
+  order: 1;
+}
+
+.workflow-copy {
+  max-width: 600px;
+}
+
+.workflow-copy h3 {
+  margin-bottom: 14px;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.04;
+}
+
+.workflow-copy p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.58;
+}
+
+.phone-frame {
+  position: relative;
+  width: min(280px, 100%);
+  margin: 0;
+  justify-self: center;
+  overflow: hidden;
+  border: 1px solid rgba(23, 25, 31, 0.08);
+  border-radius: 32px;
+  background: var(--paper);
+  box-shadow: 0 24px 56px rgba(31, 38, 54, 0.16);
+}
+
+.phone-frame img {
+  width: 100%;
+  height: auto;
+}
+
+.phone-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.phone-pair .phone-frame {
+  width: min(260px, 100%);
+}
+
+.phone-pair .offset {
+  margin-top: 54px;
 }
 
 .test-plan {
@@ -333,57 +384,6 @@ h2 {
 
 .wide-cta {
   min-width: min(100%, 280px);
-}
-
-.screen-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.screen-card {
-  grid-column: span 3;
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
-  box-shadow: 0 18px 48px rgba(31, 38, 54, 0.08);
-}
-
-.screen-card.wide {
-  grid-column: span 6;
-}
-
-.screen-card img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  object-position: top center;
-  border-bottom: 1px solid var(--line);
-  background: #f1f3f5;
-}
-
-.screen-card.wide img {
-  height: auto;
-  max-height: 620px;
-  object-fit: contain;
-}
-
-.screen-card figcaption {
-  display: grid;
-  gap: 6px;
-  padding: 16px 18px 18px;
-}
-
-.screen-card strong {
-  font-size: 16px;
-}
-
-.screen-card span {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.45;
 }
 
 .feedback {
@@ -436,8 +436,14 @@ h2 {
     align-items: start;
   }
 
-  .feature-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .workflow-card,
+  .workflow-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-card.reverse .workflow-copy,
+  .workflow-card.reverse .phone-frame {
+    order: initial;
   }
 
   .steps {
@@ -475,30 +481,22 @@ h2 {
     font-size: clamp(40px, 12vw, 54px);
   }
 
-  .feature-grid,
   .steps,
-  .screen-grid {
+  .phone-pair {
     grid-template-columns: 1fr;
   }
 
-  .feature-card {
-    min-height: 0;
+  .workflow-card {
+    padding: 18px;
   }
 
-  .feature-number {
-    margin-bottom: 18px;
+  .phone-frame,
+  .phone-pair .phone-frame {
+    width: min(100%, 315px);
   }
 
-  .screen-card,
-  .screen-card.wide {
-    grid-column: span 1;
-  }
-
-  .screen-card img,
-  .screen-card.wide img {
-    height: auto;
-    max-height: none;
-    object-fit: contain;
+  .phone-pair .offset {
+    margin-top: 0;
   }
 
   .button,
