@@ -5,8 +5,10 @@
   --soft: #f4f5f7;
   --paper: #ffffff;
   --line: #dde1e8;
-  --red: #df1f2d;
-  --red-dark: #b91624;
+  --primary: #7b2ff2;
+  --primary-dark: #5520b7;
+  --primary-soft: #f3edff;
+  --primary-line: #d8c7ff;
   --teal: #0f766e;
   --amber: #c47d13;
   --blue: #315f9f;
@@ -66,15 +68,10 @@ img {
 }
 
 .brand-mark {
-  display: grid;
   width: 34px;
   height: 34px;
-  place-items: center;
   border-radius: 7px;
-  color: #fff;
-  background: var(--ink);
-  font-size: 12px;
-  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(123, 47, 242, 0.22);
 }
 
 .site-nav {
@@ -94,7 +91,7 @@ img {
   padding: 10px 14px;
   border-radius: 7px;
   color: #fff;
-  background: var(--red);
+  background: var(--primary);
 }
 
 .section-shell {
@@ -117,8 +114,9 @@ img {
   padding: 7px 10px;
   border: 1px solid #d8ddd9;
   border-radius: 999px;
-  color: var(--teal);
-  background: #eef8f5;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  border-color: var(--primary-line);
   font-size: 13px;
   font-weight: 700;
 }
@@ -174,12 +172,12 @@ h1 {
 
 .button-primary {
   color: #fff;
-  background: var(--red);
-  box-shadow: 0 12px 28px rgba(223, 31, 45, 0.22);
+  background: var(--primary);
+  box-shadow: 0 12px 28px rgba(123, 47, 242, 0.24);
 }
 
 .button-primary:hover {
-  background: var(--red-dark);
+  background: var(--primary-dark);
 }
 
 .button-secondary {
@@ -271,7 +269,7 @@ h2 {
 .feature-number {
   display: block;
   margin-bottom: 34px;
-  color: var(--red);
+  color: var(--primary);
   font-size: 13px;
   font-weight: 800;
 }

@@ -1,6 +1,6 @@
-# AssetManagement Private Beta
+# AI Inventory Private Beta
 
-Static GitHub Pages landing page for the AssetManagement public TestFlight beta.
+Static GitHub Pages landing page for the AI Inventory public TestFlight beta.
 
 Primary beta link:
 
