@@ -195,6 +195,7 @@ h1 {
 
 .hero-media {
   position: relative;
+  min-width: 0;
 }
 
 .hero-media::before {
@@ -212,6 +213,8 @@ h1 {
   position: relative;
   display: block;
   width: 100%;
+  height: auto;
+  max-width: 100%;
   overflow: hidden;
   border: 1px solid rgba(23, 25, 31, 0.08);
   border-radius: 34px;
