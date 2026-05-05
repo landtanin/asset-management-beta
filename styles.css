@@ -207,8 +207,10 @@ h1 {
   content: "";
 }
 
-.hero-media img {
+.hero-media img,
+.hero-media video {
   position: relative;
+  display: block;
   width: 100%;
   overflow: hidden;
   border: 1px solid rgba(23, 25, 31, 0.08);
